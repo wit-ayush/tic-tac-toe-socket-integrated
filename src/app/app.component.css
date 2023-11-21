@@ -1,0 +1,9 @@
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.dark-theme {
+  background-color: #111;
+  color: #fff;
+}

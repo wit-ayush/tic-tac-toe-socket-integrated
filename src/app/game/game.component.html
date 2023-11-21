@@ -1,0 +1,18 @@
+<div class="game-container dark-theme">
+  <div class="status" *ngIf="!winner">
+    <p>Player {{ currentPlayer }}'s turn</p>
+  </div>
+
+  <div class="status" *ngIf="winner">
+    <p>Player {{ winner }} wins!</p>
+    <button (click)="resetGame()">Reset Game</button>
+  </div>
+
+  <div class="board" *ngIf="!winner">
+    <div class="row" *ngFor="let row of board; let i = index">
+      <div class="cell" *ngFor="let cell of row; let j = index" (click)="makeMove(i, j)">
+        {{ cell }}
+      </div>
+    </div>
+  </div>
+</div>
